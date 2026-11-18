@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GTA VI | Vice City Fan Concept by Data X Team</title>
+  <meta name="description" content="A fan-made GTA VI concept website: Vice City homepage, interactive map, character cards and live news. Built by Data X Team.">
+  <meta name="theme-color" content="#0b0420">
+  <meta property="og:title" content="GTA VI | Vice City Fan Concept">
+  <meta property="og:description" content="Interactive map, characters and news. A fan-made concept by Data X Team.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="gta6.css">
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <a class="logo" href="#home" aria-label="Vice City home">VICE<span>//</span>CITY</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#map">Map</a>
+      <a href="#characters">Characters</a>
+      <a href="#news">News</a>
+    </nav>
+  </header>
+
+  <main>
+   
+    <section class="hero" id="home">
+      <div class="sun" aria-hidden="true"></div>
+      <div class="skyline" id="skyline" aria-hidden="true"></div>
+      <div class="floor" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow">Welcome to Leonida</p>
+        <h1 class="title">GTA <span>VI</span></h1>
+        <p class="tagline" id="tagline">Coming November 19, 2026</p>
+
+        <div class="countdown" id="countdown" role="timer" aria-live="off">
+          <div class="cd-box"><b id="cdDays">00</b><small>days</small></div>
+          <div class="cd-box"><b id="cdHours">00</b><small>hours</small></div>
+          <div class="cd-box"><b id="cdMins">00</b><small>min</small></div>
+          <div class="cd-box"><b id="cdSecs">00</b><small>sec</small></div>
+        </div>
+        <p class="out-now" id="outNow" hidden>OUT NOW</p>
+
+        <a class="btn" href="#map">Explore Vice City</a>
+      </div>
+    </section>
+
+    <section class="section" id="map">
+      <div class="head reveal">
+        <p class="kicker">Interactive map</p>
+        <h2>Pick a spot in Leonida</h2>
+        <p class="sub">Tap a pin or use the filters. Every location opens a quick card.</p>
+      </div>
+
+      <div class="chips reveal" id="mapFilters" role="group" aria-label="Map filters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="city">Cities</button>
+        <button class="chip" data-filter="nature">Nature</button>
+        <button class="chip" data-filter="coast">Coast</button>
+      </div>
+
+      <div class="map-wrap reveal">
+        <div class="map-box">
+          <svg id="mapSvg" viewBox="0 0 600 720" role="img" aria-label="Stylised map of Leonida with clickable locations"></svg>
+        </div>
+        <aside class="info" id="mapInfo" aria-live="polite">
+          <span class="tag" id="infoTag">City</span>
+          <h3 id="infoName">Vice City</h3>
+          <p id="infoText">Neon nights, beaches and long highways.</p>
+          <p class="hint">Tip: use Tab and Enter to move between pins.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section alt" id="characters">
+      <div class="head reveal">
+        <p class="kicker">Characters</p>
+        <h2>Meet the leads</h2>
+        <p class="sub">Two protagonists, one story.</p>
+      </div>
+      <div class="cards" id="charCards"></div>
+    </section>
+
+    <section class="section" id="news">
+      <div class="head reveal">
+        <p class="kicker"><span class="live-dot"></span> Live updates</p>
+        <h2>Latest news</h2>
+      </div>
+      <div class="chips reveal" id="newsFilters" role="group" aria-label="News filters"></div>
+      <div class="news-grid" id="newsGrid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="foot-brand">Built by <strong>Data X Team</strong> <em>Code &bull; Data &bull; Develop &bull; Succeed</em></p>
+    <p class="legal">Fan-made concept project. Not affiliated with, endorsed by or connected to Rockstar Games or Take-Two Interactive. Grand Theft Auto and related names belong to their owners.</p>
+  </footer>
+
+  <script src="gta6.js"></script>
+</body>
+</html>
